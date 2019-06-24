@@ -30,7 +30,7 @@ if(isset($_POST['nome'])&& isset($_POST['senha'])){
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  
+ 
 <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -44,7 +44,7 @@ if(isset($_POST['nome'])&& isset($_POST['senha'])){
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { filter: none; background-color: #4a77d4; }
 .btn-block { width: 100%; display:block; }
 
-* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+ { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
 
 html { width: 100%; height:100%; overflow:hidden; }
 
@@ -91,7 +91,7 @@ input {
 }
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
 
-    </style>
+	</style>	
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
