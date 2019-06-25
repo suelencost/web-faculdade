@@ -58,24 +58,28 @@ if(isset($_POST['time'])&& isset($_POST['resp'])){
 <form method="POST" action="index.php">
   <div class="form-group">
     <label for="time">Time</label>
-    <input type="text" class="form-control" id="time" aria-describedby="emailHelp" placeholder="Informe seu time" name="time">
+    <input required type="text" class="form-control" id="time" aria-describedby="emailHelp" placeholder="Informe seu time" name="time">
   </div>
   <div class="form-group">
     <label for="resp">Responsável</label>
-    <input type="text" class="form-control" id="resp" placeholder="Informe o Responsável" name="resp">
+    <input required type="text" class="form-control" id="resp" placeholder="Informe o Responsável" name="resp">
   </div>
-  <button type="submit" class="btn btn-primary">Cadastrar Time</button>
+  <button type="submit" class="btn btn-outline-primary btn-lg btn-block">CADASTRAR TIME</button>
 </form>
+ <br>
+  <a href="http://localhost/web-faculdade/projeto/testes/sorteio">
+    <button type="submit" class="btn btn-outline-primary btn-lg btn-block ">SORTEAR</button>
+  </a>
 </div>
 
     <div class="container">
      <?php
       if(isset($mensagem)){
         if($status){
-          echo "<div class='alert alert-success' role='alert'>$mensagem</div>";
+          echo "<br><div class='alert alert-success' role='alert'>$mensagem</div>";
         }
         else {
-          echo "<div class='alert alert-danger' role='alert'>$mensagem</div>";
+          echo "<br><div class='alert alert-danger' role='alert'>$mensagem</div>";
         }
       }
      ?>

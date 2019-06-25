@@ -12,7 +12,8 @@ $participantes = $busca->fetchAll(PDO::FETCH_ASSOC);
 
 $numParticipantes = sizeof($participantes);
 
-
+echo "NÚMERO DE PARTICIPANTES: ". $numParticipantes. "<br><hr>";
+echo "TIMES: <BR><hr>";
 $i=0;
 while ( $i < $numParticipantes) { 
     $time = rand(0 , $numParticipantes - 1);
@@ -20,14 +21,15 @@ while ( $i < $numParticipantes) {
     if(!isset($numJaSelecionados)){
         $numJaSelecionados = array($time);
         echo $time;
-        echo "       " . $participantes[$time]["nome"] . "<br>";
+        echo  $participantes[$time]["nome"] . " x ";
         $i++;
         continue;
     }
     if(!in_array($time, $numJaSelecionados)){
         array_push($numJaSelecionados, $time);
         echo $time ;
-        echo "       " . $participantes[$time]["nome"] . "<br>";
+        if($i%2 == 0) echo "<br><hr>".$participantes[$time]["nome"] . " x ";
+        else echo $participantes[$time]["nome"];
         $i++;   
     }
     
@@ -48,12 +50,8 @@ while ( $i < $numParticipantes) {
 </head>
 <body>
 
-<div>
-    <?php 
-        echo "<br><hr>";
-        echo $numParticipantes;
-    ?>
-</div>
+<button type="submit" class="btn btn-outline-danger btn-lg btn-block "><a href="logout.php">LOGOUT</a></button>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
